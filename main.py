@@ -8,6 +8,7 @@ def print_hi(name):
     # Use a breakpoint in the code line below to debug your script.
     print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
 
+
 def flatten(listoflists):
     result = []
     for i in listoflists:
@@ -15,11 +16,28 @@ def flatten(listoflists):
             result.append(x)
     return result
 
+def up_down(int):
+    mytuple = ((int-1), (int+1))
+    return mytuple
 
+def test(x):
+    if x == 5:
+        print("x is bigger than 5")
+    elif x >= 5 and x <= 10:
+        print("x is biger than 5 and less than 10")
+    else:
+        print("x is less than 5")
 
+def test2(y):
+    x = 5
+    while x == 5:
+        for i in y:
+            print(i)
+        print("listan klarprintad")
+        x = 2
 
-# Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    print_hi('PyCharm')
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+ mylist = ["apple", "banana", "cherry"]
+ test2(mylist)
+
