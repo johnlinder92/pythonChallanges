@@ -35,9 +35,49 @@ def test2(y):
             print(i)
         print("listan klarprintad")
         x = 2
+def validate(string):
+    if string.find("def") == -1:
+        return "missing def"
+    elif string.find(":")== -1:
+        return "missing :"
+    elif string.find("(") == -1:
+        return "missing paren"
+    elif string.find(")") == -1:
+        return "missing paren"
+    elif string.find("("+")") != -1:
+        return "missing param"
+    elif string.find("    ") == -1:
+        return "missing indent"
+    elif string.find("validate") == -1:
+        return "wrong name"
+    elif string.find("return") == -1:
+        return "missing return"
+    else:
+        return True
+def test(string):
+    if string.find("def") == -1:
+        return "missing def"
 
 if __name__ == '__main__':
 
- mylist = ["apple", "banana", "cherry"]
- test2(mylist)
-
+ string = """if string.find("def") != "-1":
+        return "missing def"
+    elif string.find(":")!= "-1":
+        return "missing :"
+    elif string.find("(") != "-1":
+        return "missing paren"
+    elif string.find(")") != "-1":
+        return "missing paren"
+    elif string.find("()") != "-1":
+        return "missing param"
+    elif string.find("    ") != "-1":
+        return "missing indent"
+    elif string.find("validate") != "-1":
+        return "wrong name"
+    elif string.find("return") != "-1":
+        return "missing return"
+    else:
+        return True"""
+ string2 = "tesest"
+ print(test(string2))
+ print(validate(string))
