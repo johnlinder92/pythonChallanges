@@ -58,26 +58,21 @@ def test(string):
     if string.find("def") == -1:
         return "missing def"
 
-if __name__ == '__main__':
+def all_equal(list):
+    if list.__len__()==1:
+     return True
+    a = 0
+    for i in list:
+        a+1
+        if (i == list[a]):
+            pass
+        else:
+            return False
+    return True
 
- string = """if string.find("def") != "-1":
-        return "missing def"
-    elif string.find(":")!= "-1":
-        return "missing :"
-    elif string.find("(") != "-1":
-        return "missing paren"
-    elif string.find(")") != "-1":
-        return "missing paren"
-    elif string.find("()") != "-1":
-        return "missing param"
-    elif string.find("    ") != "-1":
-        return "missing indent"
-    elif string.find("validate") != "-1":
-        return "wrong name"
-    elif string.find("return") != "-1":
-        return "missing return"
-    else:
-        return True"""
- string2 = "tesest"
- print(test(string2))
- print(validate(string))
+def testlist(list):
+    list.append("test")
+    return list
+
+if __name__ == '__main__':
+  print(all_equal(['oo', 'oo']))
