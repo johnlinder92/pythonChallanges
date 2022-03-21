@@ -74,5 +74,23 @@ def testlist(list):
     list.append("test")
     return list
 
+def consecutive_zeros(stringofoneandzero):
+    count = 0
+    highestCount = 0
+    for i in stringofoneandzero:
+        if(len(stringofoneandzero) == 1):
+            if(i=='0'):
+                highestCount = 1
+                return highestCount
+            if(i=='1'):
+                highestCount = 0
+                return highestCount
+        if(i == '0'):
+            count += 1
+        if(i=='1'):
+            if (count>highestCount):
+                highestCount = count
+            count = 0
+    return highestCount
 if __name__ == '__main__':
   print(all_equal(['oo', 'oo']))
