@@ -58,28 +58,21 @@ def test(string):
     if string.find("def") == -1:
         return "missing def"
 
-def consecutive_zeros(stringofoneandzero):
-    count = 0
-    highestCount = 0
-    for i in stringofoneandzero:
-        if(len(stringofoneandzero) == 1):
-            if(i=='0'):
-                highestCount = 1
-                return highestCount
-            if(i=='1'):
-                highestCount = 0
-                return highestCount
-        if(i == '0'):
-            count += 1
-        if(i=='1'):
-            if (count>highestCount):
-                highestCount = count
-            count = 0
-    return highestCount
+def all_equal(list):
+    if list.__len__()==1:
+     return True
+    a = 0
+    for i in list:
+        a+1
+        if (i == list[a]):
+            pass
+        else:
+            return False
+    return True
 
+def testlist(list):
+    list.append("test")
+    return list
 
 if __name__ == '__main__':
-
-
- test = "0"
- print(consecutive_zeros(test))
+  print(all_equal(['oo', 'oo']))
