@@ -58,26 +58,28 @@ def test(string):
     if string.find("def") == -1:
         return "missing def"
 
+def consecutive_zeros(stringofoneandzero):
+    count = 0
+    highestCount = 0
+    for i in stringofoneandzero:
+        if(len(stringofoneandzero) == 1):
+            if(i=='0'):
+                highestCount = 1
+                return highestCount
+            if(i=='1'):
+                highestCount = 0
+                return highestCount
+        if(i == '0'):
+            count += 1
+        if(i=='1'):
+            if (count>highestCount):
+                highestCount = count
+            count = 0
+    return highestCount
+
+
 if __name__ == '__main__':
 
- string = """if string.find("def") != "-1":
-        return "missing def"
-    elif string.find(":")!= "-1":
-        return "missing :"
-    elif string.find("(") != "-1":
-        return "missing paren"
-    elif string.find(")") != "-1":
-        return "missing paren"
-    elif string.find("()") != "-1":
-        return "missing param"
-    elif string.find("    ") != "-1":
-        return "missing indent"
-    elif string.find("validate") != "-1":
-        return "wrong name"
-    elif string.find("return") != "-1":
-        return "missing return"
-    else:
-        return True"""
- string2 = "tesest"
- print(test(string2))
- print(validate(string))
+
+ test = "0"
+ print(consecutive_zeros(test))
