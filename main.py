@@ -92,5 +92,27 @@ def consecutive_zeros(stringofoneandzero):
                 highestCount = count
             count = 0
     return highestCount
+
+
+def list_xor(n, list1, list2):
+    existsInFirstList = 0
+    existInSecondList = 0
+
+    for i in list1:
+       if i == n:
+           existsInFirstList = 1
+    for b in list2:
+       if b == n:
+           existInSecondList = 1
+    if (existsInFirstList == 1 and existInSecondList == 1):
+        return False
+    if (existsInFirstList == 0 and existInSecondList == 1):
+        return True
+    if (existsInFirstList == 1 and existInSecondList == 0):
+        return True
+    if (existsInFirstList == 0 and existInSecondList == 0):
+        return False
+
 if __name__ == '__main__':
-  print(all_equal(['oo', 'oo']))
+    print(list_xor(1, [1, 2, 3], [4, 5, 6]))
+

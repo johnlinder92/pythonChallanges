@@ -6,9 +6,9 @@ if __name__ == '__main__':
         z = x
         lista.append(x)
         if x > 10:
-            print("Du har skrivit in ett nummer större än 10")
-        elif x < 10:
-            print("Du har skrivit in ett nummer mindre än 10")
+            print("A")
+        elif x == 11:
+            print("B")
         else:
             print("Du skrev in nummret 10")
     for i in lista:
