@@ -10,6 +10,6 @@ if __name__ == '__main__':
         elif x == 11:
             print("B")
         else:
-            print("Du skrev in nummret 10")
+            print("Du skrev in nummret 10")#commented
     for i in lista:
         print(i)
